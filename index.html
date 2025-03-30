@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Personal Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+
+</head>
+
+<body>
+    <div id="header">
+        <div class="container">
+            <p>My Portfolio :)</p>
+            <nav>
+                <i class="fa-solid fa-bars" id="menu-icon" onclick="openmenu()"></i> <!-- Mobile Menu Icon -->
+                <ul id="sidemenu">
+                    <i class="fa-solid fa-circle-xmark" id="close-icon" onclick="closemenu()"></i> <!-- Close Button -->
+                    <li><a href="#about" onclick="closemenu()">About</a></li>
+                    <li><a href="#skills" onclick="closemenu(); opentab('skills')">Skills</a></li>
+                    <li><a href="#experience" onclick="closemenu(); opentab('experience')">Experience</a></li>
+                    <li><a href="#contact" onclick="closemenu()">Contact</a></li>
+                </ul>
+            </nav>
+            
+        </div>
+        <div id="profile-img"></div>
+        <div class="header-text">
+            <p>Passionate Software Engineer</p>
+            <h1>Hi, I am <span>Sivathmika Chavali</span></h1>
+            <a href="https://leetcode.com/u/sivathmika522/" target="_blank" class="btn">Leetcode Profile</a>
+
+        </div>
+    </div>
+<!-- ----------------about------------------- -->
+    <div id="about">
+        <div class="container">
+            <div class="row">
+                <div class="about-col-1">
+                    <img src="image/img2.jpg" alt="My image">
+                </div>
+                <div class="about-col-2">
+                    <h1 class="sub-title">About Me</h1>
+                    <p>I am a software engineer with over a year of experience in the tech industry. Passionate about coding and problem-solving, I continuously work on enhancing my skills in data structures, algorithms, and web development. Currently, I am transitioning from automation testing to software development, actively honing my expertise through hands-on projects and consistent practice on LeetCode.</p>
+               <div class="tab-titles">
+                   <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                   <p class="tab-links" onclick="opentab('experience')">Experience</p>
+                </div>
+                <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programming Languages</span><br>Java, Python</li>
+                        <li><span>Web Development</span><br>NodeJs, ExpressJs, HTML,CSS BootStrap</li>
+                        <li><span>Automation & Testing</span><br>Selenium WebDriver, CopyCat Tool, Google App Script</li>
+                        <li><span>Database</span><br>MongoDB, MySQL</li>
+                        <li><span>Version Control</span><br>Git, GitHub</li>
+                        <li><span>DSA & Problem Solving</span><br>LeetCode, GeeksForGeeks, Competitive Coding</li>
+
+                    </ul>
+                </div>
+
+                <div class="tab-contents" id="experience">
+                    <ul>
+                        <li><span>QA Automation Engineer</span><br>March 2024-Present</li>
+                        <li><span>BackEnd Developer (Intern)</span><br>May 2023 - Oct 2023</li>
+                    </ul>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+<!-- ------------------contact me------------------ -->
+<div id="contact">
+    <div class="container">
+       <div class="row">
+        <div class="contact-left">
+            <h1 class="sub-title">Contact Me</h1>
+            <div class="social-icons">
+                <a href="#"><i class="fa-solid fa-envelope"></i>sivathmikac@gmail.com</a>
+                <a href="https://www.linkedin.com/in/sivathmika-chavali-96b339218/" target="_blank"><i class="fa-brands fa-linkedin"></i>LinkedIn</a>
+                <a href="https://www.instagram.com/_sivathmika__/" target="_blank"><i class="fa-brands fa-instagram"></i>Instagram</a>
+            </div>
+        </div>
+       </div>
+       
+    </div>    
+   
+</div>
+
+
+
+</body>
+<script>
+ var tablinks = document.getElementsByClassName("tab-links");
+ var tabcontents = document.getElementsByClassName("tab-contents");
+function opentab(tabname){
+    for(tablink of tablinks){
+        tablink.classList.remove("active-link");
+    }
+    for(tabcontent of tabcontents){
+        tabcontent.classList.remove("active-tab");
+    }
+    event.currentTarget.classList.add("active-link");
+    document.getElementById(tabname).classList.add("active-tab");
+}
+
+
+</script>
+<script>
+    function openmenu() {
+    document.getElementById("sidemenu").style.right = "0";
+}
+
+function closemenu() {
+    document.getElementById("sidemenu").style.right = "-250px";
+}
+
+    </script>
+</html>
