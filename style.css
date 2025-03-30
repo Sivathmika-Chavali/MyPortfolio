@@ -76,7 +76,7 @@ nav {
 #profile-img {
     width: 200px;
     height: 200px;
-    background-image: url(image/img.jpg);
+    background-image: url(img.jpg);
     background-position: center;
     background-size: cover;
     border-radius: 50%;
