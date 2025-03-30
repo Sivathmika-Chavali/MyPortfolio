@@ -348,7 +348,7 @@ nav ul li a:hover {
     nav ul {
         position: fixed;
         top: 0;
-        right: 250px; /* Initially hidden */
+        right: -250px; /* Initially hidden */
         width: 200px;
         height: 100vh;
         background: #ff004f;
